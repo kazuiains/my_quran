@@ -150,9 +150,15 @@ class SuraModel extends Sura {
       dropOffPlace = json[suraModelColumn6];
       translation = json[suraModelColumn7];
       description = json[suraModelColumn8];
-      audio = AudioModel.fromJson(jsonDecode(json[suraModelColumn9]));
-      nextSura = SuraModel.fromJson(jsonDecode(json[suraModelColumn10]));
-      prevSura = SuraModel.fromJson(jsonDecode(json[suraModelColumn11]));
+      if (json[suraModelColumn9] != null) {
+        audio = AudioModel.fromJson(jsonDecode(json[suraModelColumn9]));
+      }
+      if (json[suraModelColumn10] != null) {
+        nextSura = SuraModel.fromJson(jsonDecode(json[suraModelColumn10]));
+      }
+      if (json[suraModelColumn11] != null) {
+        prevSura = SuraModel.fromJson(jsonDecode(json[suraModelColumn11]));
+      }
     }
   }
 

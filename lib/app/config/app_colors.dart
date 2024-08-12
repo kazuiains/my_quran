@@ -76,61 +76,61 @@ class AppColors {
   /// material color
 
   static MaterialColor buttonBlue = MaterialColor(
-    toInt(buttonBlueColorList[500]),
+    buttonBlueColorList[500]!.value,
     buttonBlueColorList,
   );
   static MaterialColor lightSkyBlue = MaterialColor(
-    toInt(buttonBlueColorList[200]),
+    buttonBlueColorList[200]!.value,
     buttonBlueColorList,
   );
   static MaterialColor blueDeFrance = MaterialColor(
-    toInt(buttonBlueColorList[700]),
+    buttonBlueColorList[700]!.value,
     buttonBlueColorList,
   );
 
   static MaterialColor caribbeanGreen = MaterialColor(
-    toInt(caribbeanGreenColorList[300]),
+    caribbeanGreenColorList[300]!.value,
     caribbeanGreenColorList,
   );
   static MaterialColor magicMint = MaterialColor(
-    toInt(caribbeanGreenColorList[100]),
+    caribbeanGreenColorList[100]!.value,
     caribbeanGreenColorList,
   );
   static MaterialColor munsell = MaterialColor(
-    toInt(caribbeanGreenColorList[500]),
+    caribbeanGreenColorList[500]!.value,
     caribbeanGreenColorList,
   );
 
   static MaterialColor white = MaterialColor(
-    toInt(blackColorList[0]),
+    blackColorList[0]!.value,
     blackColorList,
   );
   static MaterialColor lightSilver = MaterialColor(
-    toInt(blackColorList[200]),
+    blackColorList[200]!.value,
     blackColorList,
   );
   static MaterialColor spanishGray = MaterialColor(
-    toInt(blackColorList[400]),
+    blackColorList[400]!.value,
     blackColorList,
   );
   static MaterialColor cssGrey = MaterialColor(
-    toInt(blackColorList[500]),
+    blackColorList[500]!.value,
     blackColorList,
   );
   static MaterialColor davysGrey = MaterialColor(
-    toInt(blackColorList[600]),
+    blackColorList[600]!.value,
     blackColorList,
   );
   static MaterialColor arsenic = MaterialColor(
-    toInt(blackColorList[700]),
+    blackColorList[700]!.value,
     blackColorList,
   );
   static MaterialColor raisinBlack = MaterialColor(
-    toInt(blackColorList[800]),
+    blackColorList[800]!.value,
     blackColorList,
   );
   static MaterialColor black = MaterialColor(
-    toInt(blackColorList[900]),
+    blackColorList[900]!.value,
     blackColorList,
   );
 
@@ -228,13 +228,4 @@ class AppColors {
     primaryLight,
     primary,
   ];
-
-  /// color helper
-
-  static int toInt(Color? color) {
-    if (color != null) {
-      return int.parse(color.toString().substring(6, 16));
-    }
-    return 0xffffffff;
-  }
 }

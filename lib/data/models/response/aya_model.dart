@@ -83,7 +83,9 @@ class AyaModel extends Aya {
       arabicText = json[ayaModelColumn3];
       latinText = json[ayaModelColumn4];
       indonesianText = json[ayaModelColumn5];
-      audio = AudioModel.fromJson(jsonDecode(json[ayaModelColumn6]));
+      if (json[ayaModelColumn6] != null) {
+        audio = AudioModel.fromJson(jsonDecode(json[ayaModelColumn6]));
+      }
       suraNumber = json[ayaModelColumn7];
     }
   }

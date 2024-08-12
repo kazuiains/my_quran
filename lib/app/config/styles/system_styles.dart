@@ -6,7 +6,7 @@ class SystemStyles {
   //// via theme -start-
 
   /// function to change the status bar and navigation system bar via themes
-  static SystemUiOverlayStyle systemOverlayStyle({
+  static SystemUiOverlayStyle style({
     Color? systemNavigationBarColor,
     Color? systemNavigationBarDividerColor,
     bool? systemNavigationBarContrastEnforced,
@@ -54,7 +54,7 @@ class SystemStyles {
   //// via code -start-
 
   /// function to change the status bar and navigation system bar via code
-  static setSystemOverlayStyle({
+  static setStyle({
     Color? systemNavigationBarColor,
     Color? systemNavigationBarDividerColor,
     bool? systemNavigationBarContrastEnforced,
@@ -68,7 +68,7 @@ class SystemStyles {
     double opacity = AppDimens.defaultOpacitySystemStyleOverlay,
   }) {
     SystemChrome.setSystemUIOverlayStyle(
-      systemOverlayStyle(
+      style(
         systemNavigationBarColor: systemNavigationBarColor,
         systemNavigationBarDividerColor: systemNavigationBarDividerColor,
         systemNavigationBarContrastEnforced: systemNavigationBarContrastEnforced,
@@ -131,7 +131,7 @@ class SystemStyles {
 
   /// bundle function for the main system style of the apps
   static Future basic() async {
-    setSystemOverlayStyle();
+    setStyle();
     return Future.wait(
       [
         setModeScreen(),

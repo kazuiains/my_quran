@@ -17,7 +17,7 @@ class ThemeStyles {
       primaryColorDark: AppColors.primaryDark,
       scaffoldBackgroundColor: AppColors.bodyColor,
       appBarTheme: AppBarTheme(
-        systemOverlayStyle: SystemStyles.systemOverlayStyle(),
+        systemOverlayStyle: SystemStyles.style(),
       ),
     );
   }
