@@ -42,7 +42,7 @@ class QuranRemoteDataSourceImpl extends ApiDataSource
   @override
   Future<BaseResponseModel> listAya(data) async {
     final response = await execute(
-      urlPath: "${ApiEndpoint.aya}/$data",
+      urlPath: "${ApiEndpoint.sura}/$data",
     );
 
     return BaseResponseModel.fromJson(

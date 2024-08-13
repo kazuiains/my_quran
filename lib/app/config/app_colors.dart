@@ -52,6 +52,7 @@ class AppColors {
   static Color vividGamboge = const Color(0xffFF9800);
 
   static Color lotion = const Color(0xffFCFCFC);
+  static Color cultured = const Color(0xfff8f8f8);
   static Color platinum = const Color(0xffE7E7E7);
   static Color lightGrey = const Color(0xffd3d3d3);
   static Color grey = const Color(0xff808080);

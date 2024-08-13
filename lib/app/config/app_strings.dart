@@ -1,4 +1,6 @@
 class AppStrings {
+  static const String quran = "Al-Qur'an";
+
   //form
   static const String defaultNaValue = "NA";
   static const String defaultNullValue = "-";

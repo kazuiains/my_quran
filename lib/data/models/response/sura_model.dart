@@ -88,10 +88,10 @@ class SuraModel extends Sura {
           interpretation?.add(InterpretationModel.fromJson(v));
         });
       }
-      nextSura = json['suratSelanjutnya'] != null
+      nextSura = json['suratSelanjutnya'] != null && json['suratSelanjutnya'] != false && json['suratSelanjutnya'] != true
           ? SuraModel.fromJson(json['suratSelanjutnya'])
           : null;
-      prevSura = json['suratSebelumnya'] != null
+      prevSura = json['suratSebelumnya'] != null && json['suratSebelumnya'] != false && json['suratSebelumnya'] != true
           ? SuraModel.fromJson(json['suratSebelumnya'])
           : null;
     }

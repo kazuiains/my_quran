@@ -1,1 +1,87 @@
-class BaseButtonsView {}
+import 'package:flutter/material.dart';
+import 'package:my_quran/app/config/app_colors.dart';
+import 'package:my_quran/app/config/app_styles.dart';
+
+class BaseButtonsView {
+  static MaterialButton flat({
+    Key? key,
+    required VoidCallback? onPressed,
+    VoidCallback? onLongPress,
+    ValueChanged<bool>? onHighlightChanged,
+    MouseCursor? mouseCursor,
+    ButtonTextTheme? textTheme,
+    Color? textColor,
+    Color? disabledTextColor,
+    Color? color,
+    Color? disabledColor,
+    Color? focusColor,
+    Color? hoverColor,
+    Color? highlightColor,
+    Color? splashColor,
+    Brightness? colorBrightness,
+    double? elevation,
+    double? focusElevation,
+    double? hoverElevation,
+    double? highlightElevation,
+    double? disabledElevation,
+    EdgeInsetsGeometry? padding,
+    VisualDensity? visualDensity,
+    ShapeBorder? shape,
+    Clip clipBehavior = Clip.none,
+    FocusNode? focusNode,
+    bool autofocus = false,
+    MaterialTapTargetSize? materialTapTargetSize,
+    Duration? animationDuration,
+    double? minWidth,
+    double? height,
+    bool enableFeedback = true,
+    Widget? child,
+    BorderRadiusGeometry? borderRadius,
+    String label = "",
+    TextStyle? textStyle,
+    double? radiusSize,
+  }) {
+    return MaterialButton(
+      key: key,
+      onPressed: onPressed,
+      onLongPress: onLongPress,
+      onHighlightChanged: onHighlightChanged,
+      mouseCursor: mouseCursor,
+      textTheme: textTheme,
+      textColor: textColor ?? Colors.white,
+      disabledTextColor: disabledTextColor,
+      color: color ?? AppColors.defaultButtonActiveColor,
+      disabledColor: disabledColor ?? AppColors.defaultButtonDisableColor,
+      focusColor: focusColor,
+      hoverColor: hoverColor,
+      highlightColor: highlightColor,
+      splashColor: splashColor,
+      colorBrightness: colorBrightness,
+      elevation: elevation ?? 0,
+      focusElevation: focusElevation ?? 0,
+      hoverElevation: hoverElevation ?? 0,
+      highlightElevation: highlightElevation ?? 0,
+      disabledElevation: disabledElevation ?? 0,
+      padding: padding,
+      visualDensity: visualDensity,
+      shape: shape ??
+          ShapeStyles.rounded(
+            borderRadius: borderRadius,
+            radiusSize: radiusSize,
+          ),
+      clipBehavior: clipBehavior,
+      focusNode: focusNode,
+      autofocus: autofocus,
+      materialTapTargetSize: materialTapTargetSize,
+      animationDuration: animationDuration,
+      minWidth: minWidth,
+      height: height ?? 50,
+      enableFeedback: enableFeedback,
+      child: child ??
+          Text(
+            label,
+            style: textStyle,
+          ),
+    );
+  }
+}
