@@ -163,7 +163,11 @@ class QuranLocalDataSourceImpl
 
       for (var i in aya) {
         var items = dataLocal.where((model) => model.number == i.number);
-        Map<String, dynamic> tableData = AyaModel.fromEntity(i).toTable();
+        Map<String, dynamic> tableData = AyaModel.fromEntity(
+          i.copyWith(
+            suraNumber: data.number,
+          ),
+        ).toTable();
 
         if (items.isEmpty) {
           batch.insert(
@@ -225,8 +229,11 @@ class QuranLocalDataSourceImpl
 
       for (var i in interpretation) {
         var items = dataLocal.where((model) => model.aya == i.aya);
-        Map<String, dynamic> tableData =
-            InterpretationModel.fromEntity(i).toTable();
+        Map<String, dynamic> tableData = InterpretationModel.fromEntity(
+          i.copyWith(
+            suraNumber: data.number,
+          ),
+        ).toTable();
 
         if (items.isEmpty) {
           batch.insert(

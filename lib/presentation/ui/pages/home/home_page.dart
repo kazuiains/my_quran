@@ -73,11 +73,9 @@ class HomePage extends GetView<HomeController> {
               return ListView.builder(
                 physics: const BouncingScrollPhysics(),
                 itemBuilder: (context, index) {
-                  return Obx(
-                    () => SuraItemView(
-                      onTap: () => controller.onDetail(context, index),
-                      sura: controller.listData[index],
-                    ),
+                  return SuraItemView(
+                    onTap: () => controller.onDetail(context, index),
+                    sura: controller.listData[index],
                   );
                 },
                 itemCount: controller.listData.length,
